@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 import "./styles/index.css";
 
-import Home from "./pages/home.tsx";
+import Home from "./pages/Home.tsx";
 import Profile from "./pages/profile.tsx";
 import Settings from "./pages/settings.tsx";
 

@@ -16,7 +16,7 @@ import { items } from "@/data/fake-data";
 const MapView = lazy(() => import("../components/map-view"));
 
 export default function Home() {
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [activeTab, setActiveTab] = useState<string>("list");
 
   useEffect(() => {

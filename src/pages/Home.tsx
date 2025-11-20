@@ -16,7 +16,7 @@ import { items } from "@/data/fake-data";
 const MapView = lazy(() => import("../components/map-view"));
 
 export default function Home() {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>("list");
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Home() {
           <div className="flex gap-3 items-center w-full md:w-auto">
             <SelectboxFilter />
             <Input
-              placeholder="Paris"
+              placeholder="Lyon"
               className="bg-[#162242] text-gray-200 border-[#2C3E50]"
             />
             <Button
@@ -55,7 +55,7 @@ export default function Home() {
           <Tabs
             value={activeTab}
             onValueChange={setActiveTab}
-            className="w-full md:w-auto"
+            className="m-auto"
           >
             <TabsList className="bg-[#162242]">
               <TabsTrigger
@@ -82,6 +82,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
+              className="px-12"
             >
               <div className="text-left mb-6">
                 <motion.h3
@@ -100,8 +101,11 @@ export default function Home() {
                 </motion.h4>
               </div>
               {loading ? (
-                <AnimatePresence mode="wait">
-                  <div key="skeleton" className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <AnimatePresence>
+                  <div
+                    key="skeleton"
+                    className="grid sm:grid-cols-2 md:grid-cols-3 gap-6"
+                  >
                     {Array.from({ length: items.length }).map((_, i) => (
                       <motion.div
                         key={`skeleton-${i}`}
@@ -121,7 +125,7 @@ export default function Home() {
               ) : (
                 <AnimatePresence mode="wait">
                   <div key="content">
-                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                       {items.map((item, i) => (
                         <motion.div
                           key={i}
@@ -170,7 +174,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="px-4"
+              className="px-12"
             >
               <div className="text-left mb-6">
                 <motion.h3

@@ -51,8 +51,8 @@ export default function CardItem({
           </Button>
         </div>
 
-        <div className="flex gap-2 flex-wrap justify-center w-full px-4 mb-3">
-          {badges.map((badge, i) => (
+        <div className="flex gap-2 justify-center w-full px-4 mb-3">
+          {badges.slice(0, 2).map((badge, i) => (
             <Badge
               className="bg-[#1A2B4A] text-blue-300 hover:bg-[#1A2B4A]/20"
               key={`${badge} - ${i}`}
@@ -60,6 +60,11 @@ export default function CardItem({
               {badge}
             </Badge>
           ))}
+          {badges.length > 2 && (
+            <Badge className="bg-[#1A2B4A] text-blue-300 hover:bg-[#1A2B4A]/20">
+              +{badges.length - 2}
+            </Badge>
+          )}
         </div>
 
         <CardContent className="flex flex-col gap-2">

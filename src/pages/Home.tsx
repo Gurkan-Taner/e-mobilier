@@ -34,7 +34,7 @@ export default function Home() {
           transition={{ type: "spring", stiffness: 100 }}
           className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 bg-[#101E3C] rounded-xl p-4 shadow-lg"
         >
-          <div className="flex gap-3 items-center w-full md:w-auto">
+          <div className="flex gap-3 items-center w-full md:w-auto flex-wrap sm:flex-nowrap">
             <SelectboxFilter />
             <Input
               placeholder="Lyon"

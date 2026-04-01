@@ -9,7 +9,7 @@ import {
 export default function SelectboxFilter() {
   return (
     <Select>
-      <SelectTrigger className="w-[180px] border-[1px] border-gray-500/50">
+      <SelectTrigger className="border-[1px] border-gray-500/50 w-full">
         <SelectValue placeholder="Achat" />
       </SelectTrigger>
       <SelectContent>

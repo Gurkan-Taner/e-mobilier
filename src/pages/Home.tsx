@@ -32,9 +32,9 @@ export default function Home() {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 100 }}
-          className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 bg-[#101E3C] rounded-xl p-4 shadow-lg"
+          className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 bg-[#101E3C] rounded-xl p-4 shadow-lg w-full"
         >
-          <div className="flex gap-3 items-center w-full md:w-auto flex-wrap sm:flex-nowrap">
+          <div className="flex gap-3 items-center w-full flex-wrap sm:flex-nowrap">
             <SelectboxFilter />
             <Input
               placeholder="Lyon"
@@ -42,11 +42,11 @@ export default function Home() {
             />
             <Button
               variant="outline"
-              className="bg-[#1A2B4A] text-gray-200 hover:bg-[#233756] border-none"
+              className="bg-[#1A2B4A] text-gray-200 hover:bg-[#233756] border-none ml-auto"
             >
               <Search className="text-blue-300" />
             </Button>
-            <Button className="rounded-full bg-[#1A2B4A] text-gray-200 hover:bg-[#233756] flex items-center gap-2">
+            <Button className="rounded-full bg-[#1A2B4A] text-gray-200 hover:bg-[#233756] flex items-center gap-2 mr-auto">
               <Filter className="text-blue-300" />
               <p>Filtres (3)</p>
             </Button>
